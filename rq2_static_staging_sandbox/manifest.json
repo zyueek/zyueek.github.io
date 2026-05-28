@@ -1,0 +1,77 @@
+{
+  "experiment": "rq2_static_staging_sandbox",
+  "scope": "author-owned sandbox GitHub Pages domains only",
+  "capabilities": [
+    {
+      "test_name": "static_html",
+      "path": "/index.html",
+      "expected_text": "Benign Static Capability Test: Static HTML served successfully.",
+      "expected_status": 200,
+      "requires_browser": false,
+      "requires_external_author_owned_host": false,
+      "safety_boundary": "Author-owned sandbox only; neutral static content; no data collection; no dynamic backend.",
+      "claim_boundary": "Shows static content control only. We do not test phishing, malware, credential collection, or dynamic C&C."
+    },
+    {
+      "test_name": "client_js",
+      "path": "/benign-js.html",
+      "expected_text": "Benign JavaScript executed successfully.",
+      "expected_status": 200,
+      "requires_browser": true,
+      "requires_external_author_owned_host": false,
+      "safety_boundary": "Author-owned sandbox only; JavaScript only updates a visible DOM element; no network requests.",
+      "claim_boundary": "Shows client-side logic, not dynamic C&C. We do not test phishing, malware, or credential collection."
+    },
+    {
+      "test_name": "external_resource",
+      "path": "/external-resource.html",
+      "expected_text": "Benign external resource loaded successfully.",
+      "expected_status": 200,
+      "requires_browser": true,
+      "requires_external_author_owned_host": true,
+      "safety_boundary": "Author-owned sandbox only; external resource must be hosted by the authors and only update visible text.",
+      "claim_boundary": "Shows external staging potential only when the external host is author-owned. We do not test phishing, malware, credential collection, or dynamic C&C."
+    },
+    {
+      "test_name": "redirect",
+      "path": "/redirect.html",
+      "expected_text": "Benign Static Capability Test: Static HTML served successfully.",
+      "expected_status": 200,
+      "requires_browser": false,
+      "requires_external_author_owned_host": false,
+      "safety_boundary": "Author-owned sandbox only; redirects remain on the sandbox domain.",
+      "claim_boundary": "Shows static forwarding capability only. We do not test phishing, malware, credential collection, or dynamic C&C."
+    },
+    {
+      "test_name": "file_hosting",
+      "path": "/downloads/benign.txt",
+      "expected_text": "This is a benign static capability test file. It contains no executable content.",
+      "expected_status": 200,
+      "requires_browser": false,
+      "requires_external_author_owned_host": false,
+      "safety_boundary": "Author-owned sandbox only; text file contains no executable content.",
+      "claim_boundary": "Shows file-hosting potential, not malware. We do not test phishing, credential collection, or dynamic C&C."
+    },
+    {
+      "test_name": "project_mockup",
+      "path": "/project-mockup.html",
+      "expected_text": "This is a benign non-submitting static mockup. No data is collected.",
+      "expected_status": 200,
+      "requires_browser": false,
+      "requires_external_author_owned_host": false,
+      "safety_boundary": "Author-owned sandbox only; generic project page; no submitting forms; no real logos or brand names.",
+      "claim_boundary": "Shows visual presentation risk only. We do not test phishing, malware, credential collection, or dynamic C&C."
+    },
+    {
+      "test_name": "https",
+      "path": "/https-check.html",
+      "expected_text": "HTTPS check page for benign static capability experiment.",
+      "expected_status": 200,
+      "requires_browser": false,
+      "requires_external_author_owned_host": false,
+      "safety_boundary": "Author-owned sandbox only; HTTPS availability check without interaction with affected domains.",
+      "claim_boundary": "Shows HTTPS presentation if available. We do not test phishing, malware, credential collection, or dynamic C&C."
+    }
+  ]
+}
+
