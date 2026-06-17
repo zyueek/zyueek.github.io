@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RQ2 Client-Side Route Capability Probe</title>
+</head>
+<body>
+  <h1>RQ2 controlled author-owned sandbox</h1>
+  <p>RQ2 controlled author-owned sandbox. No phishing, malware, credential collection, exploit delivery, or real command execution.</p>
+  <p id="route-status">Waiting for route.</p>
+  <script>
+    function renderRoute() {
+      const hash = window.location.hash || "#/";
+      document.getElementById("route-status").textContent =
+        hash === "#/benign-route"
+          ? "Benign client-side route rendered successfully."
+          : "Benign client-side route page loaded.";
+    }
+    window.addEventListener("hashchange", renderRoute);
+    renderRoute();
+  </script>
+</body>
+</html>
