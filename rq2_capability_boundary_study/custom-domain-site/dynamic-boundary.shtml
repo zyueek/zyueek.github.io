@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RQ2 SSI Dynamic Boundary Probe</title>
+</head>
+<body>
+  <h1>RQ2 controlled author-owned sandbox</h1>
+  <p>RQ2 controlled author-owned sandbox. No phishing, malware, credential collection, exploit delivery, or real command execution.</p>
+  <p>This benign probe checks whether GitHub Pages evaluates server-side include directives.</p>
+  <p id="ssi-output"><!--#echo var="DATE_LOCAL" --></p>
+</body>
+</html>
