@@ -1,0 +1,6 @@
+{
+  "status": "static-noop",
+  "marker": "RQ2 controlled author-owned sandbox",
+  "safety": "No phishing, malware, credential collection, exploit delivery, or real command execution.",
+  "state": "This file is static and is not modified by HTTP requests."
+}
