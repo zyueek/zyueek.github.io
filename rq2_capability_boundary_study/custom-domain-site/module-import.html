@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RQ2 ES Module Capability Probe</title>
+</head>
+<body>
+  <h1>RQ2 controlled author-owned sandbox</h1>
+  <p>RQ2 controlled author-owned sandbox. No phishing, malware, credential collection, exploit delivery, or real command execution.</p>
+  <p id="module-status">Waiting for module import.</p>
+  <script type="module">
+    import { moduleMarker } from "./module-helper.js";
+    document.getElementById("module-status").textContent = moduleMarker();
+  </script>
+</body>
+</html>
