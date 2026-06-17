@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RQ2 Web Worker Capability Probe</title>
+</head>
+<body>
+  <h1>RQ2 controlled author-owned sandbox</h1>
+  <p>RQ2 controlled author-owned sandbox. No phishing, malware, credential collection, exploit delivery, or real command execution.</p>
+  <p id="worker-status">Waiting for worker.</p>
+  <script>
+    const worker = new Worker("./worker.js");
+    worker.onmessage = (event) => {
+      document.getElementById("worker-status").textContent = event.data;
+      worker.terminate();
+    };
+    worker.postMessage("rq2-benign-worker-check");
+  </script>
+</body>
+</html>
