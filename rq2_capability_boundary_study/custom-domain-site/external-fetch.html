@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RQ2 External Fetch</title>
+  <style>body { font-family: system-ui, sans-serif; margin: 40px; line-height: 1.5; } a { color: #0b5cad; }</style>
+</head>
+<body>
+  <main>
+    <h1>External Fetch Check</h1>
+    <p>RQ2 controlled author-owned sandbox. No phishing, malware, credential collection, exploit delivery, or real command execution.</p>
+    <p id="external-fetch-result">External fetch has not completed.</p>
+    <p><a href="index.html">Back</a></p>
+  </main>
+  <script>
+    (function () {
+      var result = document.getElementById("external-fetch-result");
+      fetch("https://zyueek.github.io/rq2_capability_boundary_study/builtin-origin-resource/noop.json", { cache: "no-store" })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("HTTP " + response.status);
+          }
+          return response.json();
+        })
+        .then(function (payload) {
+          result.textContent = payload.marker || "Benign cross-origin resource loaded successfully";
+        })
+        .catch(function (error) {
+          result.textContent = "Benign cross-origin fetch blocked or unavailable: " + error.message;
+        });
+    }());
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,3 @@
+RQ2 controlled author-owned sandbox. No phishing, malware, credential collection, exploit delivery, or real command execution.
+This is a benign static capability-boundary study file. It contains no executable content.
+

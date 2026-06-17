@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="160" viewBox="0 0 480 160" role="img" aria-label="Benign cross-origin resource loaded successfully">
+  <rect width="480" height="160" fill="#f4f7f7"/>
+  <rect x="16" y="16" width="448" height="128" fill="#ffffff" stroke="#d8dde3"/>
+  <text x="32" y="78" font-family="Arial, sans-serif" font-size="22" fill="#1f2933">Benign cross-origin resource</text>
+  <text x="32" y="108" font-family="Arial, sans-serif" font-size="18" fill="#1f7a5f">loaded successfully</text>
+</svg>
+
